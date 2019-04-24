@@ -33,7 +33,8 @@
         // chek settingan tampilan menu
             // cari level user
             $id_user = $this->session->userdata('user_id');
-            // $id_user = 1032;
+            // $id_user = 1055;
+            var_dump($id_user);
             $sql_menu = "SELECT * 
             FROM tbl_menu 
             WHERE id_menu in (select id_menu from tbl_hak_akses where id_user=$id_user) and is_main_menu=0 and is_aktif='y'";

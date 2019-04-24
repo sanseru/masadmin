@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Selamat Datang | Mondo APP</title>
+  <title>Selamat Datang | Medical Administration APP</title>
+  <link rel="icon" href="<?php echo base_url(); ?>assets/images/icon_4.ico">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -53,7 +54,7 @@
 <div class="login-box">
   <div class="login-logo">
     <img class="mb-4" src="<?php echo base_url(); ?>assets/images/9d13fe2a2153f8876151690e6ac7fb71.png" alt="" width="150" height="150"><br>
-    <a href="../../index2.html"><b>Mondo</b> APP</a>
+    <a href="../../index2.html"><b>Medical</b> Administration</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

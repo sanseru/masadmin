@@ -32,7 +32,7 @@ class Auth extends CI_Controller {
         // $hashPass = password_hash($password,PASSWORD_DEFAULT);
         // $test     = password_verify($password, $hashPass);
         // query chek users
-        $this->db->where('username',$username);
+        $this->db2->where('username',$username);
         $this->db2->where('password',  md5($password));
         $users       = $this->db2->get('tbl_user');
         if($users->num_rows()>0){
@@ -48,8 +48,8 @@ class Auth extends CI_Controller {
     }
 
         function logout(){
-        $this->session->sess_destroy();
         $this->session->set_flashdata('status_login','Anda sudah berhasil keluar dari aplikasi');
+        $this->session->sess_destroy();
         redirect('auth');
     }
 }
