@@ -282,20 +282,28 @@
         url: '<?php echo base_url()?>index.php/Claim/cek_data/' + res,
     //     dataType: 'json',
         success: function(data) {
-            var nama =  'Nama                :       '+data.member_name+
-                        '<br>RS/Klinik       :       '+data.provider_name+
-                        '<br>Client          :       '+data.group_name+
-                        '<br>Claim Charge    :       '+data.claim_charge+
-                        '<br>CLaim Approve   :       '+data.claim_approved+
-                        '<br>Status          :       '+data.claim_status;
+          console.log(data);
+          if (data == ''){   
+    alert("What follows is blank COBAAAAAA: " + data);
+
+}
+else{   
+    alert("What follows is not blank: " + data);
+}           
+    //  var nama =  'Nama                :       '+data.member_name+
+    //                     '<br>RS/Klinik       :       '+data.provider_name+
+    //                     '<br>Client          :       '+data.group_name+
+    //                     '<br>Claim Charge    :       '+data.claim_charge+
+    //                     '<br>CLaim Approve   :       '+data.claim_approved+
+    //                     '<br>Status          :       '+data.claim_status;
 
 
-        $('.Cekdulu').html(nama);
-        $('#claim_id').val(data.claim_id);
-        $('#claim_approved').val(data.claim_approved);
+    //     $('.Cekdulu').html(nama);
+    //     $('#claim_id').val(data.claim_id);
+    //     $('#claim_approved').val(data.claim_approved);
 
-            $('#myModal').modal('show');
-            $('#open_claim').val("");
+    //         $('#myModal').modal('show');
+    //         $('#open_claim').val("");
 
         },
         error:function(request, status, error) {
@@ -412,7 +420,7 @@ $('.btn-action4').click(function(){
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> -->
 
-          <script type="text/javascript">
+<script type="text/javascript">
 function toasterOptions() {
     toastr.options = {
       "closeButton": true,
